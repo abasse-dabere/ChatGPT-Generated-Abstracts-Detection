@@ -14,9 +14,10 @@ _Data sourced from the CHEAT dataset introduced by Xu et al. (2023): https://arx
   - Human vs Mix  
 - **Rich linguistic features**: length, burstiness, vocabulary metrics, TF–IDF patterns, readability, POS distributions, perplexity…  
 - **Models**:  
-  - Logistic Regression  
-  - XGBoost  
-  - DistilRoBERTa + LoRA (text‑only)
+  - Logistic Regression (38 features) 
+  - XGBoost (38 features)
+  - DistilRoBERTa + LoRA (abstract‑only)
+  - DistilRoBERTa + handcrafted linguistic features (abstract + 38 features)
 
 ---
 
@@ -32,14 +33,16 @@ For each class (human, generation, polish, mix):
 
 ## 📈 Results
 
-| Model                    | Task                 | Accuracy | AUC    |
-|--------------------------|----------------------|----------|--------|
-| Logistic Regression      | Human vs Generation  | 97.19%   | 99.55% |
-|                          | Human vs Polish      | 78.48%   | 85.84% |
-|                          | Human vs Mix         | 65.73%   | 71.31% |
-| XGBoost                  | Human vs Generation  | 97.73%   | 99.71% |
-|                          | Human vs Polish      | 79.67%   | 88.49% |
-|                          | Human vs Mix         | 66.17%   | 72.26% |
-| DistilRoBERTa + LoRA     | Human vs Generation  | 91.86%   | 99.98% |
-|                          | Human vs Polish      | 73.04%   | 99.02% |
-|                          | Human vs Mix         | 62.18%   | 84.92% |
+| Model                          | Task                 | Accuracy | AUC    |
+|--------------------------------|----------------------|----------|--------|
+| Logistic Regression            | Human vs Generation  | 97.19%   | 99.55% |
+|                                | Human vs Polish      | 78.48%   | 85.84% |
+|                                | Human vs Mix         | 65.73%   | 71.31% |
+| XGBoost                        | Human vs Generation  | 97.73%   | 99.71% |
+|                                | Human vs Polish      | 79.67%   | 88.49% |
+|                                | Human vs Mix         | 66.17%   | 72.26% |
+| DistilRoBERTa + LoRA           | Human vs Generation  | 91.86%   | 99.98% |
+|                                | Human vs Polish      | 73.04%   | 99.02% |
+|                                | Human vs Mix         | 62.18%   | 84.92% |
+| DistilRoBERTa + Features       | Human vs Polish      | 96.43%   | 99.58% |
+|                                | Human vs Mix         | 73.31%   | 82.75% |
