@@ -2,6 +2,8 @@
 
 **Detect whether a research abstract is human‑written, AI‑generated, AI‑polished, or a human–AI mix.**
 
+_Data sourced from the CHEAT dataset introduced by Xu et al. (2023): https://arxiv.org/pdf/2304.12008_
+
 ---
 
 ## 🔑 Key Features
