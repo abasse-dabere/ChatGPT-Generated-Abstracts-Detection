@@ -1,4 +1,3 @@
-data/
 lora_output/
 scripts/__pycache__/
 genr.ipynb
